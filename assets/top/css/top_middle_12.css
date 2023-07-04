@@ -2,32 +2,22 @@
   display: flex;
   align-items: center;
   height: 768px;
-  width: 100%;
 }
 
-.top12-left-container {
-  flex: 4;
-}
-
-.top13-left-img {
-  width: 100%;
+.top12-left-img {
+  flex: 8;
+  width: 1024px;
   height: 768px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .top12-right-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #002c4b;
   width: 342px;
-  height: 768px;
-}
-
-.top13-left-img {
-  cursor: pointer;
   height: 768px;
 }
 
@@ -54,5 +44,4 @@
 .top12-arrow-icon {
   width: 25px;
   height: 3px;
-  color: #a4b1ba;
 }
