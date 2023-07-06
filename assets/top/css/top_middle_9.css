@@ -1,5 +1,5 @@
 .top9-main-container {
-  height: 768px;
+  width: 100%;
 }
 
 .top9-container {
@@ -7,15 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  height: 70vh;
   background-image: url("../../top/img/top9_img.jpg");
   /* background-image: url("/asets/top/img/top9_img.jpg"); */
-  background-size: 70%;
-  height: 588px;
 }
 
 .top9-card-container {

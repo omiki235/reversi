@@ -1,15 +1,25 @@
-.fixed-header {
+.header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 999;
+  height: 50px; /* ヘッダーの高さ */
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 9999; /* ヘッダーを最前面に表示 */
 }
 
 .header-container {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* ヘッダーの高さ */
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  z-index: 9999;
 }
 
 @media screen and (max-width: 768px) {
@@ -89,9 +99,10 @@
 
 .lang-btn1 {
   font-family: "Noto Sans CJK JP", sans-serif;
-  background: transparent;
   border: 1px solid white;
   border-radius: 8px 0 0 8px;
+  padding: 5px;
+  background: transparent;
   color: #ffffff;
   cursor: pointer;
 }
@@ -100,6 +111,7 @@
   font-family: "Noto Sans CJK JP", sans-serif;
   background: transparent;
   border: 1px solid white;
+  padding: 5px;
   border-right: none;
   border-left: none;
   color: #ffffff;
@@ -111,6 +123,7 @@
   background: transparent;
   border: 1px solid white;
   border-radius: 0 8px 8px 0;
+  padding: 5px;
   color: #ffffff;
   cursor: pointer;
 }

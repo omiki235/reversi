@@ -1,17 +1,13 @@
-.top7-main-container {
-  height: 768px;
-}
-
 .top7-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  background-image: url("../../top/img/top7_img.jpg");
   height: 600px;
-  /* background-image: url("../../top/img/top7_img.jpg"); */
-  background-image: url("/assets//top/img/top7_img.jpg");
+  width: 100vw;
+  /* background-image: url("/assets/top/img/top7_img.jpg"); */
 }
 
 .top7-upper-text {

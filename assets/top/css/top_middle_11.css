@@ -1,15 +1,13 @@
 .top11-main-container {
-  height: 768px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
   .top11-main-container {
     flex-direction: column;
     align-items: center;
-    height: 812px;
-    margin-bottom: 100px;
+    height: auto;
   }
 }
 

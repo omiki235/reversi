@@ -1,7 +1,6 @@
 .top13-main-container {
   display: flex;
   justify-content: space-evenly;
-  height: 768px;
 }
 @media screen and (max-width: 768px) {
   .top13-main-container {

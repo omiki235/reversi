@@ -1,25 +1,13 @@
-.top8-main-container {
-  height: 768px;
-}
-@media screen and (max-width: 768px) {
-  .top8-main-container {
-    height: 812px;
-    margin-top: 50px;
-  }
-}
-
 .top8-upper-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
 }
 @media screen and (max-width: 1700px) {
   .top8-upper-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {

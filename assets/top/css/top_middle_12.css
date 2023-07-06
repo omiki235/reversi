@@ -1,7 +1,6 @@
 .top12-main-container {
   display: flex;
   align-items: center;
-  height: 768px;
 }
 @media screen and (max-width: 768px) {
   .top12-main-container {

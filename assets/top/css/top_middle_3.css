@@ -2,9 +2,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* background-image: url("../../top/img/top3_1.jpg"); */
-  background-image: url("/assets//top/img/top3_1.jpg");
-  height: 768px;
+  background-image: url("../../top/img/top3_1.jpg");
+  /* background-image: url("assets//top/img/top3_1.jpg"); */
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 768px) {
   .top3-main-container {

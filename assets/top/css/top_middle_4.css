@@ -3,7 +3,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 768px;
 }
 @media screen and (max-width: 768px) {
   .top4-main-container {
