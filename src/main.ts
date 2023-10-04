@@ -9,14 +9,15 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.static('static', { extensions: ['html'] }));
 
-app.get('/api/hello', async (req, res) => {
-  res.json({
-    message: 'Hello Express',
-  });
-});
-
 app.get('/api/error', async (req, res) => {
   throw new Error('Error Endpoint');
+});
+
+app.post('/api/games', async (req, res) => {
+  const statedAt = new Date();
+  console.log(`startedAt = ${statedAt}`);
+
+  res.status(201).end();
 });
 
 app.use(errorHandler);
