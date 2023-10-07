@@ -2,6 +2,7 @@ import express from 'express';
 import 'express-async-errors';
 import morgan from 'morgan';
 import mysql from 'mysql2/promise';
+import { GameGateway } from './data-access/game-gateway';
 
 const EMPTY = 0;
 const DARK = 1;
@@ -26,6 +27,8 @@ app.use(morgan('dev'));
 app.use(express.static('static', { extensions: ['html'] }));
 app.use(express.json());
 
+const gameGateway = new GameGateway();
+
 app.get('/api/error', async (req, res) => {
   throw new Error('error end point');
 });
@@ -37,15 +40,11 @@ app.post('/api/games', async (req, res) => {
   try {
     await conn.beginTransaction();
 
-    const gameInsertResult = await conn.execute<mysql.ResultSetHeader>(
-      'insert into games (started_at) values (?)',
-      [now]
-    );
-    const gameId = gameInsertResult[0].insertId;
+    const gameRecord = await gameGateway.insert(conn, now);
 
     const turnInsertResult = await conn.execute<mysql.ResultSetHeader>(
       'insert into turns (game_id, turn_count, next_disc, end_at) values (?, ?, ?, ?)',
-      [gameId, 0, DARK, now]
+      [gameRecord.id, 0, DARK, now]
     );
     const turnId = turnInsertResult[0].insertId;
 
