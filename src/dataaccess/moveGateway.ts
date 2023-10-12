@@ -1,4 +1,4 @@
-import mysql from 'mysql2/promise';
+import mysql from 'mysql2/promise'
 
 export class MoveGateway {
   async insert(
@@ -11,6 +11,6 @@ export class MoveGateway {
     await conn.execute(
       'insert into moves (turn_id, disc, x, y) values (?, ?, ?, ?)',
       [turnId, disc, x, y]
-    );
+    )
   }
 }

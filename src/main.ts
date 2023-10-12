@@ -1,8 +1,8 @@
 import express from 'express';
 import 'express-async-errors';
 import morgan from 'morgan';
-import { gameRouter } from './presentation/game-router';
-import { turnRouter } from './presentation/turn-router';
+import { gameRouter } from './presentation/gameRouter';
+import { turnRouter } from './presentation/turnRouter';
 
 const PORT = 8000;
 
@@ -18,7 +18,7 @@ app.use(turnRouter);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`リバーシアプリを起動しました！: http://localhost:${PORT}`);
+  console.log(`Reversi application started: http://localhost:${PORT}`);
 });
 
 function errorHandler(
