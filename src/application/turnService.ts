@@ -3,10 +3,10 @@ import { GameGateway } from '../dataaccess/gameGateway';
 import { MoveGateway } from '../dataaccess/moveGateway';
 import { SquareGateway } from '../dataaccess/squareGateway';
 import { TurnGateway } from '../dataaccess/turnGateway';
-import { Board } from '../domain/board';
-import { toDisc } from '../domain/disc';
-import { Point } from '../domain/point';
-import { Turn } from '../domain/turn';
+import { Board } from '../domain/turn/board';
+import { toDisc } from '../domain/turn/disc';
+import { Point } from '../domain/turn/point';
+import { Turn } from '../domain/turn/turn';
 
 const gameGateway = new GameGateway();
 const turnGateway = new TurnGateway();
