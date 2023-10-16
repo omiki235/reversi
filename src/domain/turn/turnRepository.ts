@@ -33,7 +33,7 @@ export class TurnRepository {
     );
     const board = Array.from(Array(8)).map(() => Array.from(Array(8)));
     squareRecords.forEach((s) => {
-      board[s.x][s.y] = s.disc;
+      board[s.y][s.x] = s.disc;
     });
 
     const moveRecord = await moveGateway.findForTurnId(conn, turnRecord.id);
