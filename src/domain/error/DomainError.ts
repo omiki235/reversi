@@ -3,13 +3,14 @@ type DomainErrorType =
   | 'FlipPointsIsEmpty'
   | 'SelectedDiscIsNotNextDisc'
   | 'SpecifiedTurnNotFound'
+  | 'InvalidPoint';
 
 export class DomainError extends Error {
   constructor(private _type: DomainErrorType, message: string) {
-    super(message)
+    super(message);
   }
 
   get type() {
-    return this._type
+    return this._type;
   }
 }

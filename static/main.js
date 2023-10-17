@@ -54,6 +54,8 @@ function showNextDiscMessage(nextDisc) {
   if (nextDisc) {
     const color = nextDisc === DARK ? '黒' : '白';
     nextDiscMessageElement.innerText = `次は${color}の番です`;
+  } else {
+    nextDiscMessageElement.innerText = '';
   }
 }
 
