@@ -1,6 +1,7 @@
 import { Disc, isOppositeDisc } from './disc';
 import { Move } from './move';
 import { Point } from './point';
+import { DomainError } from '../../error/DomainError';
 
 export class Board {
   private _walledDiscs: Disc[][];
@@ -20,7 +21,7 @@ export class Board {
 
     // ひっくり返せる点がない場合、置くことはできない
     if (flipPoints.length === 0) {
-      throw new Error('Flip points is empty');
+      throw new DomainError('FlipPointsIsEmpty', 'Flip points is empty');
     }
 
     // 盤面をコピー
