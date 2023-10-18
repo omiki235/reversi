@@ -1,5 +1,5 @@
-import mysql from 'mysql2/promise';
-import { MoveRecord } from './moveRecord';
+import mysql from 'mysql2/promise'
+import { MoveRecord } from './moveRecord'
 
 export class MoveGateway {
   async findForTurnId(
@@ -9,11 +9,11 @@ export class MoveGateway {
     const moveSelectResult = await conn.execute<mysql.RowDataPacket[]>(
       'select id, turn_id, disc, x, y from moves where turn_id = ?',
       [turnId]
-    );
-    const record = moveSelectResult[0][0];
+    )
+    const record = moveSelectResult[0][0]
 
     if (!record) {
-      return undefined;
+      return undefined
     }
 
     return new MoveRecord(
@@ -22,7 +22,7 @@ export class MoveGateway {
       record['disc'],
       record['x'],
       record['y']
-    );
+    )
   }
 
   async insert(
@@ -35,6 +35,6 @@ export class MoveGateway {
     await conn.execute(
       'insert into moves (turn_id, disc, x, y) values (?, ?, ?, ?)',
       [turnId, disc, x, y]
-    );
+    )
   }
 }
