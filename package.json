@@ -1,14 +1,11 @@
 {
-  "name": "reversi",
+  "name": "udemy-reversi-webapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
-    "conn": "./bin/connect_mysql.sh",
-    "load": "./bin/load_ddl.sh",
-    "docker": "docker compose up -d",
-    "docker-down": "docker compose down"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",

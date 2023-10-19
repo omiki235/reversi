@@ -1,4 +1,4 @@
-# API 　設計メモ
+# API 設計メモ
 
 ## 対戦を開始する
 
@@ -6,18 +6,18 @@
 
 POST /api/games
 
-## 現在の盤面を表示する
+## 現在の盤面を表示する・勝敗を確認する
 
 指定したターン数の「ターン」を取得する
 
-Get /api/games/latest/turns/{turnCount}
+GET /api/games/latest/turns/{turnCount}
 
 レスポンスボディ
 
 ```json
 {
   "turnCount": 1,
-  "borad": [
+  "board": [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
